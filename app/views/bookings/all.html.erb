@@ -32,15 +32,6 @@
         <td><%= booking.deliveryoption.deloption %></td>
         <td class="functions">
           <%= link_to 'Edit', edit_booking_path(booking), class: "no_print" %><br>
-          <% if booking.provided %>
-            <% if booking.deliveryoption_id == 3 %>
-              versendet
-            <% else %>
-              bereitgestellt
-            <% end %>
-          <% else %>
-            <%= link_to 'abschliessen', provide_path(booking), method: :post, class: "no_print" %>
-          <% end %>
         </td>
       </tr>
     <% end %>
