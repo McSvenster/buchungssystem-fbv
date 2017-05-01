@@ -11,18 +11,19 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.consider_all_requests_local       = false
+  config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.sendgrid.net",
     port: 587,
     authentication: 'plain',
-    user_name: "app67251225@heroku.com",
-    password: "gy7xpwlu6607",
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD'],
     domain: 'https://fbv-chur.herokuapp.com',
     enable_starttls_auto: true
   }
@@ -95,18 +96,4 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # mail-config
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: ENV['APP_SMTP_SERVER'],
-    authentication: 'login',
-    user_name: ENV['APP_SMTP_USER'],
-    password: ENV['APP_SMTP_PASSWORD']
-    # openssl_verify_mode: 'none'
-  }
-  host = 'http://reserve-test.elasticbeanstalk.com'
-  config.action_mailer.default_url_options = {
-    host: host,
-  }
 end
