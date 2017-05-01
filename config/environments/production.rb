@@ -18,13 +18,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "login-42.hoststar.ch",
-    port: 465,
-    authentication: 'login',
-    user_name: 'reserve@koesling.it',
-    password: ENV['KIT_SMTP_PASSWORD'],
-    enable_starttls_auto: true,
-    openssl_verify_mode: 'none'
+    address: "smtp.sendgrid.net",
+    port: "25",
+    authentication: 'plain',
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD']
   }
 
   host = 'https://fbv-chur.herokuapp.com'
