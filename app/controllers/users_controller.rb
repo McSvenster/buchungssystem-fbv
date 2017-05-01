@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       if User.where(email: params[:email]).first
         @user = User.where(email: params[:email]).first
         @user.set_onetimetoken
-        UserMailer.password_reset(@user).deliver
+        UserMailer.password_reset(@user).deliver_now
         redirect_to new_session_path, notice: t(:email_sent)
       else
         redirect_to request_reset_users_path, alert: t(:unknown_email)
