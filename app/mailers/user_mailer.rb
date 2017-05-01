@@ -2,7 +2,7 @@ class UserMailer < ApplicationMailer
 
   def password_reset(user)
     @user = user
-    @url = "http://reserve-test.elasticbeanstalk.com/"
+    @url = "https://fbv-chur.herokuapp.com"
     mail(to: @user.email, subject: 'Passwort setzen')
   end
 end

@@ -17,10 +17,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "tux83.hoststar.ch",
+    address: "login-42.hoststar.ch",
     authentication: 'login',
-    user_name: "reserve@privat.koesling.it",
+    user_name: 'reserve@koesling.it',
     password: ENV['KIT_SMTP_PASSWORD'],
+    enable_starttls_auto: true,
     openssl_verify_mode: 'none'
   }
   host = 'localhost:3000'
