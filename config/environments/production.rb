@@ -19,13 +19,14 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "login-42.hoststar.ch",
+    port: 465,
     authentication: 'login',
     user_name: 'reserve@koesling.it',
     password: ENV['KIT_SMTP_PASSWORD'],
     enable_starttls_auto: true,
     openssl_verify_mode: 'none'
   }
-  
+
   host = 'https://fbv-chur.herokuapp.com'
   config.action_mailer.default_url_options = {
     host: host,
