@@ -80,7 +80,7 @@ de:
   dnname: "Nachname"
   dtime: "Sterbezeit"
   email_sent: "Ihnen wurde ein E-Mail mit Angaben zum weiteren Vorgehen gesendet."
-  home: "Startseite"
+  home: "Startseite / neue Buchung anlegen"
   logged_out: "Sie wurden abgemeldet."
   login: "Anmeldung"
   login_failed: "Benutzername oder Passwort waren falsch."
