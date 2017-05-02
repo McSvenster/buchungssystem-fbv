@@ -48,7 +48,7 @@
     </td>
     <td class="field">
       <%= t(:birthdate) %><br>
-      <%= f.date_field :birthdate, placeholder: "dd.mm.YYYY", value: (@booking.birthdate.nil? ? nil : l(@booking.birthdate)) %>
+      <%= f.date_field :birthdate, placeholder: "dd.mm.YYYY", value: (@booking.birthdate.nil? ? nil : l(@booking.birthdate)), type: "text" %>
     </td>
   </tr>
   <tr>
