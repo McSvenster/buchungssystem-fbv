@@ -14,7 +14,12 @@ class BookingsController < ApplicationController
   def all
     @title = t(:bookings)
     if @current_user.role == 3
-      @bookings = Booking.where( company_id: @current_user.company_id )
+      if params[:datum] && params[:datum] != ""
+        @title = "Buchungen für den #{l(params[:datum].to_date)}"
+        @bookings = Booking.where( company_id: @current_user.company_id ).where( bdate: params[:datum].to_date).order('btime ASC')
+      else
+        @bookings = Booking.where( company_id: @current_user.company_id ).order('btime ASC')
+      end
     else
       if params[:datum] && params[:datum] != ""
         @title = "Buchungen für den #{l(params[:datum].to_date)}"
