@@ -31,5 +31,12 @@
   }
   #content {
     width: 298mm;
+    table {
+      border: 1px solid black;
+    }
+    td {
+      border-top: 1px solid black;
+      font-size: 18px;
+    }
   }
 }
