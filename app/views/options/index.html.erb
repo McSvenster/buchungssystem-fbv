@@ -1,7 +1,10 @@
 <header class="inhalt">
   <h2>Grundeinstellungen</h2>
   <p>angezeigte Tage: <%= @defaults.bdates %><br>
-    buchbare slots pro Tag: <%= @defaults.slots %></p>
+    buchbare slots pro Tag: <%= @defaults.slots %><br>
+    Uhrzeit, nach der Buchungen nicht mehr editierbar sind: <%= @defaults.blocktime.strftime("%H:%M") %> Uhr
+    </p>
+
 </header>
 
 <article class="inhalt">

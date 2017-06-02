@@ -50,4 +50,8 @@ class Booking < ActiveRecord::Base
     Booking.where("lsdate >= ?", self.bdate).size
   end
 
+  def block
+    self.bdate <= Date.today && Time.now > Option.where(date: "0001-01-01").first.blocktime
+  end
+
 end
