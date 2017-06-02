@@ -51,7 +51,7 @@ class Booking < ActiveRecord::Base
   end
 
   def block
-    self.bdate <= Date.today && Time.now > Option.where(date: "0001-01-01").first.blocktime
+    self.bdate <= Date.today && Time.now.strftime("%H:%M") > Option.where(date: "0001-01-01").first.blocktime.strftime("%H:%M")
   end
 
 end
