@@ -4,7 +4,7 @@ class Booking < ActiveRecord::Base
   belongs_to :company
   belongs_to :deliveryoption
 
-  validates_presence_of :lwohnort, :birthdate, :lsdate, :vname, :nname, :ddate
+  validates_presence_of :lwohnort, :birthdate, :lsdate, :vname, :nname, :ddate, :deliveryoption_id
   validates :ddate, uniqueness: {:message => :already_registered, scope: [:vname, :nname, :ddate]}
   validate :zeitlAblauf
 

@@ -7,6 +7,7 @@ de:
         bdate: "Kremation"
         birthdate: "Geburtsdatum"
         ddate: "Sterbedatum und -zeit"
+        deliveryoption: "Lieferoptionen"
         lsdate: "Sarg-Lieferdatum"
         lwohnort: "Letzter Wohnort"
         nname: "Nachname"
@@ -42,6 +43,8 @@ de:
               twodays: " kann frühestens 48 Stunden nach dem Tod erfolgen."
             birthdate:
               before_ddate: " kann nicht nach dem Sterbedatum liegen."
+            deliveryoption_id: 
+              blank: "muss ausgewählt werden."
             lsdate:
               before_bdate: "muss vor dem Datum der Kremation liegen."
               eq_bdate: " Die Anlieferung muss bis spätestens 10:00 Uhr erfolgen."

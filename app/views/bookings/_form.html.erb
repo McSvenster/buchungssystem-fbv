@@ -103,7 +103,7 @@
   <tr>
     <td class="field">
       <%= t(:deliveryoption) %><br>
-      <%= f.collection_select(:deliveryoption_id, Deliveryoption.all, :id, :deloption ) %>
+      <%= f.collection_select(:deliveryoption_id, Deliveryoption.all, :id, :deloption, :include_blank => true ) %>
     </td>
     <td colspan="2">
       <aside id="del_info"></aside>
