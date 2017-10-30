@@ -2,8 +2,8 @@
 <table class="liste">
   <thead>
     <tr>
-      <th><%= t(:company) %></th>
       <th><%= t(:dname) %></th>
+      <th><%= t(:company) %></th>
       <th><%= t(:ddate) %></th>
       <th><%= t(:lsdate ) %></th>
       <th><%= t(:bdate ) %></th>
@@ -20,14 +20,14 @@
       <% else %>
         <tr>
       <% end %>
+        <td><%= booking.nname %>, <%= booking.vname %></td>
         <td><%= booking.company.name %></td>
-        <td><%= booking.vname %> <%= booking.nname %></td>
         <td><%= l(booking.ddate, format: :datetime) %></td>
         <td><%= l(booking.lsdate, format: :datetime) %></td>
-        <td><%= link_to l(booking.bdate), all_path(datum: booking.bdate) %>
+        <td><b><%= link_to l(booking.bdate), all_path(datum: booking.bdate) %>
           <% if booking.btime %>
             , <%= l(booking.btime) %>
-          <% end %></td>
+          <% end %></b></td>
         <td><%= l(booking.wludate, format: :datetime) %></td>
         <td><%= booking.deliveryoption.deloption %></td>
         <td class="functions">
