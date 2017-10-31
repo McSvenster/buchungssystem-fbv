@@ -11,6 +11,7 @@ gem 'pg'
 ## fuer heroku mail versand
 gem 'sendgrid-ruby'
 
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -59,4 +60,4 @@ end
 
 gem 'rails_12factor', group: :production
 
-ruby "2.3.1"
+ruby ">= 2.3.1"
