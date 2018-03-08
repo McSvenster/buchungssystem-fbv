@@ -58,7 +58,7 @@ delopts.each do |o|
   end
 end
 
-defaultopt = Option.new( date: "0001-01-01", slots: 8, bdates: 10 )
+defaultopt = Option.new( date: "0001-01-01", slots: 8, bdates: 10, blocktime: "22:00:00" )
 
 if defaultopt.save
   puts "Grundeinstellungen wurden vorgenommen."

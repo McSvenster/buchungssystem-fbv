@@ -46,7 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -59,4 +59,4 @@ end
 
 gem 'rails_12factor', group: :production
 
-ruby "2.3.1"
+# ruby "2.3.1"

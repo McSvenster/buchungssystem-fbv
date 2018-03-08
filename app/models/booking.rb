@@ -6,7 +6,7 @@ class Booking < ActiveRecord::Base
 
   validates_presence_of :lwohnort, :birthdate, :lsdate, :vname, :nname, :ddate, :deliveryoption_id
   validates :ddate, uniqueness: {:message => :already_registered, scope: [:vname, :nname, :ddate]}
-  validate :zeitlAblauf
+  validate :zeitlAblauf, :overbooked?
 
   def zeitlAblauf
       if self.ddate != nil && self.ddate != "" && self.ddate > Time.now
@@ -44,6 +44,16 @@ class Booking < ActiveRecord::Base
       if self.ddate != nil && self.ddate != "" && self.birthdate != nil && self.birthdate != "" && self.birthdate > self.ddate
         errors.add(:birthdate, :before_ddate)
       end
+  end
+
+  def overbooking
+
+  end
+
+  def overbooked?
+    if 1 ==1
+      errors.add(:overbooking, :overbooked)
+    end
   end
 
   def lseqb

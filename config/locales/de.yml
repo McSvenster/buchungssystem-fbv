@@ -8,9 +8,11 @@ de:
         birthdate: "Geburtsdatum"
         ddate: "Sterbedatum und -zeit"
         deliveryoption: "Lieferoptionen"
+        deliveryoption_id: "Lieferoptionen"
         lsdate: "Sarg-Lieferdatum"
         lwohnort: "Letzter Wohnort"
         nname: "Nachname"
+        overbooking: "Buchung nicht mehr möglich"
         vname: "Vorname"
         wludate: "Lieferdatum der Urne"
       company:
@@ -43,7 +45,7 @@ de:
               twodays: " kann frühestens 48 Stunden nach dem Tod erfolgen."
             birthdate:
               before_ddate: " kann nicht nach dem Sterbedatum liegen."
-            deliveryoption_id: 
+            deliveryoption_id:
               blank: "muss ausgewählt werden."
             lsdate:
               before_bdate: "muss vor dem Datum der Kremation liegen."
@@ -51,6 +53,8 @@ de:
               before_ddate: "muss nach dem Sterbedatum liegen."
               invalid: "Bitte Datum und Uhrzeit angeben (TT.MM.YYYY HH:MM)."
               to_many: " Für diesen Tag können wir keine Anlieferung inkl. Kremation mehr annehmen."
+            overbooking:
+              overbooked: "Da war jemand schneller."
             wludate:
               wlu_on_bdate: "sollte einen Tag nach der Kremation ab 10:00 Uhr sein - bitte kontaktieren Sie uns."
               wlu_before_bdate: "kann nicht vor der Kremation liegen."
@@ -62,7 +66,6 @@ de:
       option: "Ausnahme"
     label:
       vname: "Vorname"
-
   bdate: "Datum der Kremation"
   birthdate: "Geburtsdatum"
   btime: "Uhrzeit der Kremation"
@@ -113,7 +116,7 @@ de:
     - Fr
     - Sa
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mär
@@ -139,7 +142,7 @@ de:
       long: "%e. %B %Y"
       short: "%e. %b"
     month_names:
-    - 
+    -
     - Januar
     - Februar
     - März
