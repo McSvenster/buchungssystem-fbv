@@ -54,4 +54,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  rescue_from ActionController::InvalidAuthenticityToken do
+    redirect_to new_session_url, notice: t(:timeout)
+  end
+
 end

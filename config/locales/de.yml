@@ -99,6 +99,7 @@ de:
   password_changed: "Das neue Passwort wurde gespeichert."
   password_not_changed: "Das Passwort wurde nicht verändert."
   reset: "Passwort neu setzen"
+  timeout: "Die Sitzung ist abgelaufen - bitte melden Sie sich neu an."
   unknown_email: "Diese E-Mail-Adresse ist uns nicht bekannt."
   user: "Bestatter"
   users: "Liste der Bestatter und Planer"
