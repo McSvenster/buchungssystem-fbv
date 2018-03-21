@@ -47,11 +47,19 @@ class Booking < ActiveRecord::Base
   end
 
   def overbooking
-
+    # fake methode fuer die Fehlermeldung
   end
 
   def overbooked?
-    if 1 ==1
+    if Option.where(date: self.bdate).first
+      free_slots = Option.where(date: self.bdate).first.slots
+    elsif self.bdate.saturday? || self.bdate.sunday?
+      free_slots = 0
+    else
+      free_slots = defaults.slots
+    end
+
+    if free_slots - Booking.where(bdate: self.bdate).count < 1
       errors.add(:overbooking, :overbooked)
     end
   end
@@ -63,5 +71,6 @@ class Booking < ActiveRecord::Base
   def block
     self.bdate <= Date.today && Time.now.strftime("%H:%M") > Option.where(date: "0001-01-01").first.blocktime.strftime("%H:%M")
   end
+
 
 end
