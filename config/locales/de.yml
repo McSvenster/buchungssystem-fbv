@@ -12,7 +12,7 @@ de:
         lsdate: "Sarg-Lieferdatum"
         lwohnort: "Letzter Wohnort"
         nname: "Nachname"
-        overbooking: "Buchung nicht mehr möglich"
+        overbooking: "Ausgebucht"
         vname: "Vorname"
         wludate: "Lieferdatum der Urne"
       company:
@@ -54,7 +54,7 @@ de:
               invalid: "Bitte Datum und Uhrzeit angeben (TT.MM.YYYY HH:MM)."
               to_many: " Für diesen Tag können wir keine Anlieferung inkl. Kremation mehr annehmen."
             overbooking:
-              overbooked: "Da war jemand schneller."
+              overbooked: "Wir können für diesen Tag leider keine Reservation mehr annehmen."
             wludate:
               wlu_on_bdate: "sollte einen Tag nach der Kremation ab 10:00 Uhr sein - bitte kontaktieren Sie uns."
               wlu_before_bdate: "kann nicht vor der Kremation liegen."
