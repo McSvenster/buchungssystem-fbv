@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
     Option.where(date: "0001-01-01").first
   end
 
-  helper_method :dayname, :is_admin, :bookable_slots
+  helper_method :dayname, :is_admin, :bookable_slots, :defaults
 
   private 
   

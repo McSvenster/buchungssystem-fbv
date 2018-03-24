@@ -56,7 +56,7 @@ class Booking < ActiveRecord::Base
     elsif self.bdate.saturday? || self.bdate.sunday?
       free_slots = 0
     else
-      free_slots = defaults.slots
+      free_slots = Option.where(date: "0001-01-01").first.slots
     end
 
     if free_slots - Booking.where(bdate: self.bdate).count < 1
