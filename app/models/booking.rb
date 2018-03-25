@@ -4,7 +4,7 @@ class Booking < ActiveRecord::Base
   belongs_to :company
   belongs_to :deliveryoption
 
-  validates_presence_of :lwohnort, :birthdate, :lsdate, :vname, :nname, :ddate, :deliveryoption_id
+  validates_presence_of :lwohnort, :birthdate, :lsdate, :vname, :nname, :ddate, :deliveryoption_id, :company_id, :wludate
   validates :ddate, uniqueness: {:message => :already_registered, scope: [:vname, :nname, :ddate]}
   validate :zeitlAblauf, :overbooked?
 
@@ -35,10 +35,10 @@ class Booking < ActiveRecord::Base
       if self.lsdate != nil && self.lsdate != "" && self.ddate != nil && self.ddate != "" && self.lsdate < self.ddate
         errors.add(:lsdate, :before_ddate)
       end
-      if self.wludate != nil && self.wludate != "" && self.bdate != nil && self.bdate != "" && self.wludate <= (self.bdate.to_datetime) + 1.days + 9.hours + 59.minutes && self.approved != true
+      if self.wludate != nil && self.wludate != "" && self.bdate != nil && self.bdate != "" && self.wludate <= (self.bdate.in_time_zone) + 1.days + 9.hours + 59.minutes && self.approved != true
         errors.add(:wludate, :wlu_on_bdate)
       end
-      if self.wludate != nil && self.wludate != "" && self.bdate != nil && self.bdate != "" && self.wludate < (self.bdate.to_datetime)
+      if self.wludate != nil && self.wludate != "" && self.bdate != nil && self.bdate != "" && self.wludate < (self.bdate.in_time_zone)
         errors.add(:wludate, :wlu_before_bdate)
       end
       if self.ddate != nil && self.ddate != "" && self.birthdate != nil && self.birthdate != "" && self.birthdate > self.ddate
