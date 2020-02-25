@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @booking.company_id %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @booking.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @booking.lname %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @booking.birthdate %>
+</p>
+
+<p>
+  <strong>Lwohnort:</strong>
+  <%= @booking.lwohnort %>
+</p>
+
+<p>
+  <strong>Ddate:</strong>
+  <%= @booking.ddate %>
+</p>
+
+<p>
+  <strong>Lsdate:</strong>
+  <%= @booking.lsdate %>
+</p>
+
+<p>
+  <strong>Bdate:</strong>
+  <%= @booking.bdate %>
+</p>
+
+<p>
+  <strong>Btime:</strong>
+  <%= @booking.btime %>
+</p>
+
+<p>
+  <strong>Wludate:</strong>
+  <%= @booking.wludate %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @booking.approved %>
+</p>
+
+<p>
+  <strong>Deliveryoption:</strong>
+  <%= @booking.deliveryoption_id %>
+</p>
+
+<p>
+  <strong>Provided:</strong>
+  <%= @booking.provided %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @booking.created_by %>
+</p>
+
+<p>
+  <strong>Deleted:</strong>
+  <%= @booking.deleted %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

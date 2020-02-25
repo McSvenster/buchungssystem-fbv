@@ -1,0 +1,22 @@
+<%= form_with(model: deliveryoption, local: true) do |form| %>
+  <% if deliveryoption.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deliveryoption.errors.count, "error") %> prohibited this deliveryoption from being saved:</h2>
+
+      <ul>
+        <% deliveryoption.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :deloption %>
+    <%= form.text_field :deloption %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

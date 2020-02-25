@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @option.date %>
+</p>
+
+<p>
+  <strong>Slots:</strong>
+  <%= @option.slots %>
+</p>
+
+<p>
+  <strong>Bdates:</strong>
+  <%= @option.bdates %>
+</p>
+
+<p>
+  <strong>Blocktime:</strong>
+  <%= @option.blocktime %>
+</p>
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>

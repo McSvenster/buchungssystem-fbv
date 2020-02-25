@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 1
+  fname: MyString
+  lname: MyString
+  birthdate: 2020-02-24
+  lwohnort: MyString
+  ddate: 2020-02-24 11:52:03
+  lsdate: 2020-02-24 11:52:03
+  bdate: 2020-02-24
+  btime: 2020-02-24 11:52:03
+  wludate: 2020-02-24 11:52:03
+  approved: false
+  deliveryoption_id: 1
+  provided: false
+  created_by: MyString
+  deleted: false
+
+two:
+  company_id: 1
+  fname: MyString
+  lname: MyString
+  birthdate: 2020-02-24
+  lwohnort: MyString
+  ddate: 2020-02-24 11:52:03
+  lsdate: 2020-02-24 11:52:03
+  bdate: 2020-02-24
+  btime: 2020-02-24 11:52:03
+  wludate: 2020-02-24 11:52:03
+  approved: false
+  deliveryoption_id: 1
+  provided: false
+  created_by: MyString
+  deleted: false

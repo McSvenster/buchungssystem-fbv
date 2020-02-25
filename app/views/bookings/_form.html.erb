@@ -1,0 +1,92 @@
+<%= form_with(model: booking, local: true) do |form| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+        <% booking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.number_field :company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vname %>
+    <%= form.text_field :vname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nname %>
+    <%= form.text_field :nname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.date_select :birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lwohnort %>
+    <%= form.text_field :lwohnort %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ddate %>
+    <%= form.datetime_select :ddate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lsdate %>
+    <%= form.datetime_select :lsdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bdate %>
+    <%= form.date_select :bdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :btime %>
+    <%= form.time_select :btime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wludate %>
+    <%= form.datetime_select :wludate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :approved %>
+    <%= form.check_box :approved %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deliveryoption_id %>
+    <%= form.number_field :deliveryoption_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :provided %>
+    <%= form.check_box :provided %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_by %>
+    <%= form.text_field :created_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted %>
+    <%= form.check_box :deleted %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
